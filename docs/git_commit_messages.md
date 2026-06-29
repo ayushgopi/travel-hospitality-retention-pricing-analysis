@@ -14,3 +14,9 @@ Use these commits after each major step if you want a clean project history.
 Optional final commit:
 
 `docs: finalize week 1 and week 2 analytics deliverables`
+
+Week 3 commits:
+
+1. `feat: add baseline cancellation prediction models`
+2. `feat: add week 3 model evaluation visuals and reports`
+3. `docs: update project workflow for predictive modeling`

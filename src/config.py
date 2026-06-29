@@ -22,6 +22,9 @@ SEGMENTS_PATH = PROCESSED_DIR / "customer_segments.csv"
 CLEANING_REPORT_PATH = REPORTS_DIR / "data_cleaning_report.md"
 EDA_REPORT_PATH = REPORTS_DIR / "eda_summary_report.md"
 BUSINESS_RECOMMENDATIONS_PATH = REPORTS_DIR / "business_recommendations.md"
+MODELING_REPORT_PATH = REPORTS_DIR / "week3_modeling_report.md"
+MODEL_METRICS_PATH = PROCESSED_DIR / "week3_model_metrics.csv"
+MODEL_FEATURE_IMPORTANCE_PATH = PROCESSED_DIR / "week3_feature_importance.csv"
 
 MONTH_ORDER = [
     "January",
