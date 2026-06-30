@@ -1,0 +1,110 @@
+{
+  "name": "Hospitality Executive Dark Blue",
+  "dataColors": [
+    "#2F80ED",
+    "#56CCF2",
+    "#27AE60",
+    "#F2994A",
+    "#EB5757",
+    "#9B51E0",
+    "#BDBDBD",
+    "#FFFFFF"
+  ],
+  "background": "#071A2F",
+  "foreground": "#FFFFFF",
+  "tableAccent": "#2F80ED",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "color": {
+              "solid": {
+                "color": "#0B2744"
+              }
+            },
+            "transparency": 0
+          }
+        ],
+        "border": [
+          {
+            "show": true,
+            "color": {
+              "solid": {
+                "color": "#1F4E79"
+              }
+            },
+            "radius": 12
+          }
+        ],
+        "title": [
+          {
+            "show": true,
+            "fontColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "fontSize": 12,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ],
+        "labels": [
+          {
+            "color": {
+              "solid": {
+                "color": "#DCEBFF"
+              }
+            },
+            "fontSize": 10,
+            "fontFamily": "Segoe UI"
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "labels": [
+          {
+            "color": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "fontSize": 26,
+            "fontFamily": "Segoe UI Semibold"
+          }
+        ],
+        "categoryLabels": [
+          {
+            "color": {
+              "solid": {
+                "color": "#AFCBEA"
+              }
+            },
+            "fontSize": 11,
+            "fontFamily": "Segoe UI"
+          }
+        ]
+      }
+    },
+    "slicer": {
+      "*": {
+        "items": [
+          {
+            "fontColor": {
+              "solid": {
+                "color": "#FFFFFF"
+              }
+            },
+            "background": {
+              "solid": {
+                "color": "#0E335A"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

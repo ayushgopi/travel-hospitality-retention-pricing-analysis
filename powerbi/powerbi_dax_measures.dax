@@ -1,0 +1,149 @@
+-- Table name assumed in Power BI: cleaned_hotel_bookings
+-- Rename the imported table to cleaned_hotel_bookings before creating these measures.
+
+Total Bookings =
+COUNTROWS(cleaned_hotel_bookings)
+
+Cancelled Bookings =
+CALCULATE(
+    [Total Bookings],
+    cleaned_hotel_bookings[is_canceled] = 1
+)
+
+Completed Bookings =
+CALCULATE(
+    [Total Bookings],
+    cleaned_hotel_bookings[is_canceled] = 0
+)
+
+Cancellation Rate % =
+DIVIDE([Cancelled Bookings], [Total Bookings])
+
+Completion Rate % =
+DIVIDE([Completed Bookings], [Total Bookings])
+
+Average Daily Rate =
+AVERAGE(cleaned_hotel_bookings[adr])
+
+Average Stay Duration =
+AVERAGE(cleaned_hotel_bookings[total_stay])
+
+Average Lead Time =
+AVERAGE(cleaned_hotel_bookings[lead_time])
+
+Total Guests =
+SUM(cleaned_hotel_bookings[total_guests])
+
+Total Adults =
+SUM(cleaned_hotel_bookings[adults])
+
+Total Children =
+SUM(cleaned_hotel_bookings[children])
+
+Total Babies =
+SUM(cleaned_hotel_bookings[babies])
+
+Gross Booking Value =
+SUM(cleaned_hotel_bookings[booking_value])
+
+Realized Booking Value =
+SUMX(
+    cleaned_hotel_bookings,
+    cleaned_hotel_bookings[booking_value] * (1 - cleaned_hotel_bookings[is_canceled])
+)
+
+Cancelled Booking Value =
+SUMX(
+    cleaned_hotel_bookings,
+    cleaned_hotel_bookings[booking_value] * cleaned_hotel_bookings[is_canceled]
+)
+
+Revenue Leakage % =
+DIVIDE([Cancelled Booking Value], [Gross Booking Value])
+
+ADR Cancelled Bookings =
+CALCULATE(
+    [Average Daily Rate],
+    cleaned_hotel_bookings[is_canceled] = 1
+)
+
+ADR Completed Bookings =
+CALCULATE(
+    [Average Daily Rate],
+    cleaned_hotel_bookings[is_canceled] = 0
+)
+
+Weekend Nights =
+SUM(cleaned_hotel_bookings[stays_in_weekend_nights])
+
+Weekday Nights =
+SUM(cleaned_hotel_bookings[stays_in_week_nights])
+
+Weekend Night Share % =
+DIVIDE([Weekend Nights], [Weekend Nights] + [Weekday Nights])
+
+Weekday Night Share % =
+DIVIDE([Weekday Nights], [Weekend Nights] + [Weekday Nights])
+
+Special Request Bookings =
+CALCULATE(
+    [Total Bookings],
+    cleaned_hotel_bookings[total_of_special_requests] > 0
+)
+
+Special Request Rate % =
+DIVIDE([Special Request Bookings], [Total Bookings])
+
+Booking Change Rate % =
+DIVIDE(
+    CALCULATE([Total Bookings], cleaned_hotel_bookings[booking_changes] > 0),
+    [Total Bookings]
+)
+
+Family Bookings =
+CALCULATE(
+    [Total Bookings],
+    cleaned_hotel_bookings[is_family_booking] = 1
+)
+
+Family Booking Rate % =
+DIVIDE([Family Bookings], [Total Bookings])
+
+High Value Bookings =
+CALCULATE(
+    [Total Bookings],
+    cleaned_hotel_bookings[is_high_value_customer] = 1
+)
+
+High Value Booking Rate % =
+DIVIDE([High Value Bookings], [Total Bookings])
+
+Business Traveller Bookings =
+CALCULATE(
+    [Total Bookings],
+    cleaned_hotel_bookings[traveller_segment] = "Business traveller"
+)
+
+Leisure Traveller Bookings =
+CALCULATE(
+    [Total Bookings],
+    cleaned_hotel_bookings[traveller_segment] = "Leisure traveller"
+)
+
+Early Planner Bookings =
+CALCULATE(
+    [Total Bookings],
+    cleaned_hotel_bookings[lead_time_bucket] = "Early planner"
+)
+
+Last Minute Bookings =
+CALCULATE(
+    [Total Bookings],
+    cleaned_hotel_bookings[lead_time_bucket] = "Last-minute booker"
+)
+
+Dynamic Title =
+"Hotel Booking Dashboard | " &
+SELECTEDVALUE(cleaned_hotel_bookings[hotel], "All Hotels") &
+" | " &
+SELECTEDVALUE(cleaned_hotel_bookings[arrival_date_month], "All Months")

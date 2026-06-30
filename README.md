@@ -26,6 +26,10 @@ travel_hospitality_retention_pricing/
     week4_final_presentation.pptx
   sql/
     business_metrics.sql
+  powerbi/
+    powerbi_dashboard_spec.md
+    powerbi_dax_measures.dax
+    hospitality_dark_blue_theme.json
   src/
     config.py
     clean_data.py
@@ -111,6 +115,20 @@ Outputs:
 ## SQL
 
 Use `sql/business_metrics.sql` in MySQL after loading `cleaned_hotel_bookings.csv` into a table named `cleaned_hotel_bookings`.
+
+## Power BI Dashboard
+
+Use the cleaned CSV file to build the final interactive dashboard:
+
+```text
+data/processed/cleaned_hotel_bookings.csv
+```
+
+Power BI build assets:
+
+- `powerbi/powerbi_dashboard_spec.md`
+- `powerbi/powerbi_dax_measures.dax`
+- `powerbi/hospitality_dark_blue_theme.json`
 
 ## Suggested Workflow
 
