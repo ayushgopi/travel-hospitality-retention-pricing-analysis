@@ -111,6 +111,7 @@ Outputs:
 - `reports/week4_executive_summary.md`
 - `reports/week4_final_business_report.md`
 - `reports/week4_final_presentation.pptx`
+- `reports/hotel_booking_powerbi_dashboard.pbix`
 
 ## SQL
 
@@ -129,6 +130,7 @@ Power BI build assets:
 - `powerbi/powerbi_dashboard_spec.md`
 - `powerbi/powerbi_dax_measures.dax`
 - `powerbi/hospitality_dark_blue_theme.json`
+- `reports/hotel_booking_powerbi_dashboard.pbix`
 
 ## Suggested Workflow
 
