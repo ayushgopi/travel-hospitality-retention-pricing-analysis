@@ -1,0 +1,13 @@
+metric_group,metric,value,display_value,business_use
+Portfolio,Cleaned bookings,86638.0,"86,638",Dataset volume available for reporting and modeling
+Retention,Cancellation rate,0.2768531129527459,27.69%,Primary retention KPI
+Pricing,Average ADR,107.03518028232416,107.04,Baseline daily rate indicator
+Demand,Average lead time,79.96851266188047,80.0 days,Booking curve and cancellation-risk input
+Revenue,Gross booking value,34389455.24465001,"34,389,455.24",Revenue opportunity before cancellations
+Revenue,Realized booking value proxy,22932035.930800002,"22,932,035.93",Cancellation-adjusted historical value
+Hotel Type,City Hotel cancellation rate,0.30205682182380333,30.21%,Hotel-level retention and forecasting benchmark
+Hotel Type,Resort Hotel cancellation rate,0.23705908617353774,23.71%,Hotel-level retention and forecasting benchmark
+Season,Summer gross booking value,16544773.799450003,"16,544,773.80",Seasonal pricing and staffing benchmark
+Season,Spring gross booking value,7949671.465650001,"7,949,671.47",Seasonal pricing and staffing benchmark
+Season,Autumn gross booking value,5938183.3341500005,"5,938,183.33",Seasonal pricing and staffing benchmark
+Season,Winter gross booking value,3956826.6454000003,"3,956,826.65",Seasonal pricing and staffing benchmark

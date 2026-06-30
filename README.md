@@ -1,6 +1,6 @@
 # Travel, Tourism & Hospitality - Customer Retention and Dynamic Pricing Analysis
 
-Week 1, Week 2, and Week 3 analytics project using the Kaggle Hotel Booking Demand dataset by Jesse Mostipak.
+Week 1 through Week 4 analytics project using the Kaggle Hotel Booking Demand dataset by Jesse Mostipak.
 
 ## Project Structure
 
@@ -15,11 +15,15 @@ travel_hospitality_retention_pricing/
     01_week1_data_cleaning.ipynb
     02_week2_eda.ipynb
     03_week3_predictive_modeling.ipynb
+    04_week4_final_handoff.ipynb
   reports/
     data_cleaning_report.md
     eda_summary_report.md
     business_recommendations.md
     week3_modeling_report.md
+    week4_executive_summary.md
+    week4_final_business_report.md
+    week4_final_presentation.pptx
   sql/
     business_metrics.sql
   src/
@@ -27,6 +31,7 @@ travel_hospitality_retention_pricing/
     clean_data.py
     eda_analysis.py
     predictive_modeling.py
+    finalize_week4.py
   visualizations/         # generated charts
 ```
 
@@ -90,6 +95,19 @@ Outputs:
 - `reports/week3_modeling_report.md`
 - modeling charts in `visualizations/`
 
+## Run Week 4
+
+```bash
+python src/finalize_week4.py
+```
+
+Outputs:
+
+- `data/processed/week4_dashboard_summary.csv`
+- `reports/week4_executive_summary.md`
+- `reports/week4_final_business_report.md`
+- `reports/week4_final_presentation.pptx`
+
 ## SQL
 
 Use `sql/business_metrics.sql` in MySQL after loading `cleaned_hotel_bookings.csv` into a table named `cleaned_hotel_bookings`.
@@ -100,5 +118,6 @@ Use `sql/business_metrics.sql` in MySQL after loading `cleaned_hotel_bookings.cs
 2. Inspect `reports/data_cleaning_report.md`.
 3. Run Week 2 EDA.
 4. Run Week 3 modeling.
-5. Inspect generated charts, model metrics, and reports.
-6. Open the notebooks in VS Code for an analyst-friendly, step-by-step view.
+5. Run Week 4 final handoff.
+6. Inspect generated charts, model metrics, reports, and presentation.
+7. Open the notebooks in VS Code for an analyst-friendly, step-by-step view.

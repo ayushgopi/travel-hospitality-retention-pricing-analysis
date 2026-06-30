@@ -25,6 +25,9 @@ BUSINESS_RECOMMENDATIONS_PATH = REPORTS_DIR / "business_recommendations.md"
 MODELING_REPORT_PATH = REPORTS_DIR / "week3_modeling_report.md"
 MODEL_METRICS_PATH = PROCESSED_DIR / "week3_model_metrics.csv"
 MODEL_FEATURE_IMPORTANCE_PATH = PROCESSED_DIR / "week3_feature_importance.csv"
+WEEK4_DASHBOARD_SUMMARY_PATH = PROCESSED_DIR / "week4_dashboard_summary.csv"
+WEEK4_FINAL_REPORT_PATH = REPORTS_DIR / "week4_final_business_report.md"
+WEEK4_EXECUTIVE_SUMMARY_PATH = REPORTS_DIR / "week4_executive_summary.md"
 
 MONTH_ORDER = [
     "January",

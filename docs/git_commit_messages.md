@@ -20,3 +20,9 @@ Week 3 commits:
 1. `feat: add baseline cancellation prediction models`
 2. `feat: add week 3 model evaluation visuals and reports`
 3. `docs: update project workflow for predictive modeling`
+
+Week 4 commits:
+
+1. `feat: add final business handoff reports`
+2. `feat: add week 4 executive presentation deck`
+3. `docs: finalize project workflow and submission deliverables`
